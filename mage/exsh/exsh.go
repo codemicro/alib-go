@@ -1,7 +1,6 @@
 package exsh
 
 import (
-	"os"
 	"os/exec"
 )
 
