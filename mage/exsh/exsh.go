@@ -2,7 +2,6 @@ package exsh
 
 import (
 	"fmt"
-	"os"
 	"os/exec"
 
 	"github.com/magefile/mage/mg"
