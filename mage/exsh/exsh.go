@@ -13,7 +13,7 @@ func IsCmdAvail(cmd string) bool {
 	return err == nil
 }
 
-func EnsureGoTool(binaryName, importPath string) error {
+func EnsureGoBin(binaryName, importPath string) error {
 	if !IsCmdAvail(binaryName) {
 
 		if mg.Verbose() {
