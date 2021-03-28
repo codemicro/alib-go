@@ -1,8 +1,12 @@
 package exsh
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
+
+	"github.com/magefile/mage/mg"
+	"github.com/magefile/mage/sh"
 )
 
 func IsCmdAvail(cmd string) bool {
@@ -10,8 +14,23 @@ func IsCmdAvail(cmd string) bool {
 	return err == nil
 }
 
-func Command(cs string, args ...string) *exec.Cmd {
-	cmd := exec.Command(cs, args...)
-	cmd.Stdout = os.Stdout
-	return cmd
+func EnsureGoTool(binaryName, importPath string) error {
+	if !IsCmdAvail(binaryName) {
+		fmt.Printf("Installing %s\n", binaryName)
+
+		if err := sh.RunWith(map[string]string{"GO111MODULE": "off"}, "go", "get", "-u", importPath); err != nil {
+			return err
+		}
+
+		if !IsCmdAvail(binaryName) {
+			return fmt.Errorf("%s was installed, but cannot be found: is GOPATH/bin on PATH?", binaryName)
+		}
+
+	} else {
+		if mg.Verbose() {
+			fmt.Printf("Skipping %s install (found in PATH)\n", binaryName)
+		}
+	}
+
+	return nil
 }
