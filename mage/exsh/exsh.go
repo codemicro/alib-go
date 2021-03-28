@@ -15,7 +15,10 @@ func IsCmdAvail(cmd string) bool {
 
 func EnsureGoTool(binaryName, importPath string) error {
 	if !IsCmdAvail(binaryName) {
-		fmt.Printf("Installing %s\n", binaryName)
+
+		if mg.Verbose() {
+			fmt.Printf("Installing %s\n", binaryName)
+		}
 
 		if err := sh.RunWith(map[string]string{"GO111MODULE": "off"}, "go", "get", "-u", importPath); err != nil {
 			return err
