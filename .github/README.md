@@ -8,6 +8,10 @@
 
 Package `alib` contains miscellaneous functions.
 
+### `ic`
+
+Package `ic` is a port of the Python [IceCream](https://github.com/gruns/icecream) library.
+
 ### `mage`
 
 Package `mage` provides code designed for use in a [Magefile](https://www.magefile.org).
