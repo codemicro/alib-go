@@ -1,6 +1,6 @@
 # alib-go
 
-![License](https://img.shields.io/github/license/codemicro/alib-go) ![Lines of code](https://img.shields.io/tokei/lines/github/codemicro/alib-go) [![Go Report Card](https://goreportcard.com/badge/github.com/codemicro/alib-go)](https://goreportcard.com/report/github.com/codemicro/alib-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/codemicro/alib-go.svg)](https://pkg.go.dev/github.com/codemicro/alib-go) ![License](https://img.shields.io/github/license/codemicro/alib-go) ![Lines of code](https://img.shields.io/tokei/lines/github/codemicro/alib-go) [![Go Report Card](https://goreportcard.com/badge/github.com/codemicro/alib-go)](https://goreportcard.com/report/github.com/codemicro/alib-go)
 
 ----
 
