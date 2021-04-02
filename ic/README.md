@@ -13,7 +13,7 @@
 ### Inspecting variables
 
 ```go
-// import "github.com/codemicro/icecream-go/ic"
+// import "github.com/codemicro/alib-go/ic"
 
 foo := func (i int) int { return i + 333 }
 ic.IC(foo(123)) // -> ic| foo(123): 456
@@ -30,7 +30,7 @@ ic.IC(baz.Name) // -> ic| baz.Name: "codemicro"
 ```go
 package main
 
-import "github.com/codemicro/icecream-go/ic"
+import "github.com/codemicro/alib-go/ic"
 
 func foo() {
     ic.IC()
